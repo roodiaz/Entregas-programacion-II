@@ -11,7 +11,7 @@ namespace Estanteria
         private Producto[] productos;
         private int ubicacionEstante;
 
-        public Estante(int capacidad)
+        private Estante(int capacidad)
         {
             this.productos = new Producto[capacidad];
         }
