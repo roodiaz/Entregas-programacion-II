@@ -11,7 +11,7 @@ namespace Estanteria
         private Producto[] productos;
         private int ubicacionEstante;
 
-        private Estante(int capacidad)
+        public Estante(int capacidad)
         {
             this.productos = new Producto[capacidad];
         }
@@ -80,15 +80,15 @@ namespace Estanteria
             return false;
         }
 
-        public static Estante operator -(Estante e, Producto p)
+        public static bool operator -(Estante e, Producto p)
         {
             if (e == p)
             {
-                e.productos = e.productos.Where(x => x != p).ToArray();
-                return e;
+                e.productos = e.productos.Where(p1 => p1 != p).ToArray();
+                return true;
             }
 
-            return e;
+            return false;
         }
     }
 }

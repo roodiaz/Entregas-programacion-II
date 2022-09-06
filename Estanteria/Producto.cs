@@ -57,14 +57,14 @@ namespace Estanteria
             return !(p1 == p2);
         }
 
-        public static bool operator ==(Producto p , string param)
+        public static bool operator ==(Producto p , string marca)
         {
-            return (p.GetMarca() == param);
+            return (p.GetMarca() == marca);
         }
 
-        public static bool operator !=(Producto p, string param)
+        public static bool operator !=(Producto p, string marca)
         {
-            return !(p == param);
+            return !(p == marca);
         }
     }
 }
