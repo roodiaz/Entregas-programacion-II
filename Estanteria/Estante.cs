@@ -80,15 +80,14 @@ namespace Estanteria
             return false;
         }
 
-        public static bool operator -(Estante e, Producto p)
+        public static Estante operator -(Estante e, Producto p)
         {
             if (e == p)
             {
                 e.productos = e.productos.Where(p1 => p1 != p).ToArray();
-                return true;
             }
 
-            return false;
+            return e;
         }
     }
 }
